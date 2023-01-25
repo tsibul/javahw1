@@ -16,7 +16,7 @@ public class Main {
             System.out.print("factorial: ");
             System.out.print(factorM(number));
             System.out.println();
-            int eratos [] = eratosfenTable(number + 1);
+            int[] eratos = eratosfenTable(number + 1);
             int i = 0;
             System.out.print("1");
             while(eratos[i] != 0) {
@@ -49,8 +49,6 @@ public class Main {
                 } catch (Exception ex){
                     System.out.print("wrong input");
                     System.out.println();
-                    err = true;
-//                    iScanner.next();
                 }}
             err = true;
             while(err) {
@@ -67,37 +65,43 @@ public class Main {
             while(err) {
                 System.out.print("input action or stop ");
                 String act = iScanner.next();
-                switch (act){
-                    case "+":
+                switch (act) {
+                    case "+" -> {
                         System.out.println();
                         System.out.println(inp1 + inp2);
                         err = false;
-                        break;
-                    case "-":
+                    }
+                    case "-" -> {
                         System.out.println();
                         System.out.println(inp1 - inp2);
                         err = false;
-                        break;
-                    case "*":
+                    }
+                    case "*" -> {
                         System.out.println();
                         System.out.println(inp1 * inp2);
                         err = false;
-                        break;
-                    case "/":
+                    }
+                    case "/" -> {
                         System.out.println();
+                        if (inp2 == 0) {
+                            System.out.println("can't divide by null");
+                            break;
+                        }
                         System.out.println(inp1.floatValue() / inp2.floatValue());
                         err = false;
-                        break;
-                    case "stop":
+                    }
+                    case "stop" -> {
                         System.out.println();
                         System.out.println("stop");
                         err = false;
                         stop = true;
-                        break;
-                    default:
+                    }
+                    default -> {
                         System.out.println("wrong input");
                         iScanner.next();
-            }}
+                    }
+                }
+            }
         }
     }
 
