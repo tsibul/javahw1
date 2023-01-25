@@ -33,6 +33,8 @@ public class Main {
         calc();
         iScanner.close();
 
+        String eqation = "2?+?5=69";
+        solvEquat(eqation);
     }
 
     public static void calc()  {
@@ -144,6 +146,38 @@ public class Main {
             }
         }
         return eratosphen;
+    }
+
+    public static void solvEquat(String equat){
+        String [] arr1 = equat.split("\\+");
+        String [] arr2 = arr1[1].split("=");
+        String q = arr1[0];
+        String w = arr2[0];
+        String e = arr2[1];
+        for (Integer i = 0; i < 10; i++) {
+            for (Integer j = 0; j < 10; j++) {
+                for (Integer k = 0; k < 10; k++) {
+                    String qTemp = q.replace("?", i.toString());
+                    String wTemp = w.replace("?", i.toString());
+                    String eTemp = e.replace("?", i.toString());
+                    if (checkEquat(qTemp, wTemp, eTemp)){
+                        System.out.println(equat);
+                        System.out.println(qTemp + "+" + wTemp + "=" + eTemp);
+                        return;
+                    }
+
+                }
+
+            }
+        }
+        System.out.println("no solution");
+    }
+
+    public static boolean checkEquat(String q, String w ,String e){
+        Integer qn = Integer.parseInt(q);
+        Integer wn = Integer.parseInt(w);
+        Integer en = Integer.parseInt(e);
+        return qn + wn == en;
     }
 }
 
