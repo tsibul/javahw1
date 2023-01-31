@@ -48,14 +48,15 @@ public class HW2 {
             Параметры для фильтрации: String str = "{'name':'Ivanov', 'country':'Russia', 'city':'Moscow', 'age':'null'}";
             Результат "select * from students where “name” = “Ivanov” and “country”=”Russia” …
              */
-        /*
         System.out.println("Task 1");
         String fileName = "sql_rq.json";
         StringBuilder sqlRq = sqlReq(fileName, 0);
         System.out.println(sqlRq);
         System.out.println();
-         */
         /// task2
+            /*
+            2) Реализуйте алгоритм сортировки пузырьком числового массива, результат после каждой итерации запишите в лог-файл.
+             */
         System.out.println("Task 2");
         Logger iLogger = Log("logbubble.txt");
         System.out.println("input array length");
@@ -66,9 +67,6 @@ public class HW2 {
         System.out.println(Arrays.toString(array));
         bubbleSort(array, iLogger);
         System.out.println(Arrays.toString(array));
-            /*
-            2) Реализуйте алгоритм сортировки пузырьком числового массива, результат после каждой итерации запишите в лог-файл.
-             */
         /// task3
             /*
             3) ** Дана json строка (можно сохранить в файл и читать из файла)
