@@ -1,0 +1,44 @@
+февр. 01, 2023 1:48:41 AM HW2 calc
+INFO: input number 1 5
+февр. 01, 2023 1:48:43 AM HW2 calc
+INFO: wrong input number 2 
+февр. 01, 2023 1:48:46 AM HW2 calc
+INFO: wrong input number 2 
+февр. 01, 2023 1:48:48 AM HW2 calc
+INFO: input nomber 2 5
+февр. 01, 2023 1:48:51 AM HW2 calc
+INFO: input act k
+февр. 01, 2023 1:48:51 AM HW2 calc
+INFO: wrong input act
+февр. 01, 2023 1:49:02 AM HW2 calc
+INFO: input act :
+февр. 01, 2023 1:49:02 AM HW2 calc
+INFO: wrong input act
+февр. 01, 2023 1:49:06 AM HW2 calc
+INFO: input act +
+февр. 01, 2023 1:49:13 AM HW2 calc
+INFO: input number 1 5
+февр. 01, 2023 1:49:15 AM HW2 calc
+INFO: input nomber 2 5
+февр. 01, 2023 1:49:17 AM HW2 calc
+INFO: input act /
+февр. 01, 2023 1:49:21 AM HW2 calc
+INFO: input number 1 6
+февр. 01, 2023 1:49:25 AM HW2 calc
+INFO: input nomber 2 6
+февр. 01, 2023 1:49:26 AM HW2 calc
+INFO: input act /
+февр. 01, 2023 1:49:29 AM HW2 calc
+INFO: input act 8
+февр. 01, 2023 1:49:29 AM HW2 calc
+INFO: wrong input act
+февр. 01, 2023 1:49:36 AM HW2 calc
+INFO: input act *
+февр. 01, 2023 1:49:40 AM HW2 calc
+INFO: wrong input number 1 
+февр. 01, 2023 1:49:44 AM HW2 calc
+INFO: input number 1 5
+февр. 01, 2023 1:49:45 AM HW2 calc
+INFO: input nomber 2 5
+февр. 01, 2023 1:49:49 AM HW2 calc
+INFO: input act stop
