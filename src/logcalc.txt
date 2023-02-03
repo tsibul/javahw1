@@ -1,44 +1,58 @@
-февр. 01, 2023 1:48:41 AM HW2 calc
-INFO: input number 1 5
-февр. 01, 2023 1:48:43 AM HW2 calc
-INFO: wrong input number 2 
-февр. 01, 2023 1:48:46 AM HW2 calc
-INFO: wrong input number 2 
-февр. 01, 2023 1:48:48 AM HW2 calc
-INFO: input nomber 2 5
-февр. 01, 2023 1:48:51 AM HW2 calc
-INFO: input act k
-февр. 01, 2023 1:48:51 AM HW2 calc
-INFO: wrong input act
-февр. 01, 2023 1:49:02 AM HW2 calc
-INFO: input act :
-февр. 01, 2023 1:49:02 AM HW2 calc
-INFO: wrong input act
-февр. 01, 2023 1:49:06 AM HW2 calc
+февр. 03, 2023 9:18:38 AM HW4 stepNum
+INFO: input number 1: 1
+февр. 03, 2023 9:18:39 AM HW4 stepNum
+INFO: wrong input number 2
+февр. 03, 2023 9:18:44 AM HW4 stepNum
+INFO: input number 2: 2
+февр. 03, 2023 9:18:49 AM HW4 action
 INFO: input act +
-февр. 01, 2023 1:49:13 AM HW2 calc
-INFO: input number 1 5
-февр. 01, 2023 1:49:15 AM HW2 calc
-INFO: input nomber 2 5
-февр. 01, 2023 1:49:17 AM HW2 calc
-INFO: input act /
-февр. 01, 2023 1:49:21 AM HW2 calc
-INFO: input number 1 6
-февр. 01, 2023 1:49:25 AM HW2 calc
-INFO: input nomber 2 6
-февр. 01, 2023 1:49:26 AM HW2 calc
-INFO: input act /
-февр. 01, 2023 1:49:29 AM HW2 calc
-INFO: input act 8
-февр. 01, 2023 1:49:29 AM HW2 calc
-INFO: wrong input act
-февр. 01, 2023 1:49:36 AM HW2 calc
+февр. 03, 2023 9:18:51 AM HW4 stepNum
+INFO: input number 1: 3
+февр. 03, 2023 9:18:52 AM HW4 stepNum
+INFO: input number 2: 4
+февр. 03, 2023 9:18:54 AM HW4 action
+INFO: input act -
+февр. 03, 2023 9:18:56 AM HW4 stepNum
+INFO: input number 1: 5
+февр. 03, 2023 9:18:58 AM HW4 stepNum
+INFO: input number 2: 6
+февр. 03, 2023 9:19:00 AM HW4 action
 INFO: input act *
-февр. 01, 2023 1:49:40 AM HW2 calc
-INFO: wrong input number 1 
-февр. 01, 2023 1:49:44 AM HW2 calc
-INFO: input number 1 5
-февр. 01, 2023 1:49:45 AM HW2 calc
-INFO: input nomber 2 5
-февр. 01, 2023 1:49:49 AM HW2 calc
-INFO: input act stop
+февр. 03, 2023 9:19:04 AM HW4 stepNum
+INFO: input number 1: 7
+февр. 03, 2023 9:19:05 AM HW4 stepNum
+INFO: input number 2: 8
+февр. 03, 2023 9:19:07 AM HW4 action
+INFO: input act /
+февр. 03, 2023 9:19:15 AM HW4 action
+INFO: input act *
+февр. 03, 2023 9:19:26 AM HW4 action
+INFO: input act back
+февр. 03, 2023 9:19:29 AM HW4 stepNum
+INFO: input number 2: 7
+февр. 03, 2023 9:19:30 AM HW4 action
+INFO: input act +
+февр. 03, 2023 9:19:45 AM HW4 action
+INFO: input act back
+февр. 03, 2023 9:19:57 AM HW4 action
+INFO: input act 5
+февр. 03, 2023 9:19:57 AM HW4 action
+INFO: wrong input act
+февр. 03, 2023 9:20:20 AM HW4 action
+INFO: input act *
+февр. 03, 2023 9:20:34 AM HW4 stepNum
+INFO: input number 1: 5
+февр. 03, 2023 9:20:35 AM HW4 stepNum
+INFO: input number 2: 6
+февр. 03, 2023 9:20:36 AM HW4 action
+INFO: input act +
+февр. 03, 2023 9:20:49 AM HW4 action
+INFO: input act back
+февр. 03, 2023 9:21:03 AM HW4 stepNum
+INFO: input number 1: 1
+февр. 03, 2023 9:21:04 AM HW4 stepNum
+INFO: input number 2: 1
+февр. 03, 2023 9:21:05 AM HW4 action
+INFO: input act +
+февр. 03, 2023 9:21:14 AM HW4 action
+INFO: input act -

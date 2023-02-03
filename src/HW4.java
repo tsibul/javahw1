@@ -1,10 +1,31 @@
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.Random;
+import java.util.Scanner;
+import java.util.logging.FileHandler;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
+import java.util.Stack;
+
 
 public class HW4 {
 
-    public static void main(String[] args) {
+    public static Scanner iScanner = new Scanner(System.in);
+
+    public static Logger Log (String logfile) throws IOException {
+        Logger iLogger = Logger.getLogger(HW2.class.getName());
+        iLogger.setUseParentHandlers(false);
+        String pathProject = System.getProperty("user.dir");
+        String pathFile = pathProject.concat("\\src\\" + logfile);
+        FileHandler fh = new FileHandler(pathFile);
+        iLogger.addHandler(fh);
+        SimpleFormatter txt = new SimpleFormatter();
+        fh.setFormatter(txt);
+        return iLogger;
+    }
+
+    public static void main(String[] args) throws IOException {
         //Task1
         /*
         Пусть дан LinkedList с несколькими элементами. Реализуйте метод, который вернет “перевернутый” список.
@@ -35,8 +56,10 @@ public class HW4 {
         /*
         * В калькулятор добавьте возможность отменить последнюю операцию.
         */
+        Logger calcLogger = Log("logcalc.txt");
         System.out.println("Task2");
-
+        calc(calcLogger);
+        iScanner.close();
         System.out.println();
 
     }
@@ -52,7 +75,6 @@ public class HW4 {
     public static String dequeue (LinkedList<String> lList){
         return lList.remove();
     }
-
 
     public static LinkedList<String> randomLinList (int len, int range ) {
         Random random = new Random();
@@ -86,5 +108,130 @@ public class HW4 {
 
 
     }
+
+    public static Integer step;
+
+    public static void calc(Logger logger)  {
+        boolean stop = false;
+        Stack <String> stackVar = new Stack<>();
+        Stack <Integer> stackStep = new Stack<>();
+        step = 1;
+        Integer inp1 = null;
+        Integer inp2 = null;
+        while (!stop) {
+            boolean err = true;
+            if(step == 1) {
+                inp1 = stepNum(err, logger, inp1, stackVar, stackStep);
+                err = true;
+            } else if (step == 2) {
+                inp2 = stepNum(err, logger, inp2, stackVar, stackStep);
+                err = true;
+            }
+            else if (step == 3) {
+                stop = action(err, stop, logger, inp1, inp2, stackVar, stackStep);
+                err = true;
+            }
+        }
+    }
+
+    public static boolean action (boolean err, boolean stop, Logger logger, Integer inp1,
+                                  Integer inp2, Stack<String> stackVar, Stack<Integer> stackStep){
+        while(err) {
+            System.out.print("input action or stop or back");
+            String act = iScanner.next();
+            logger.log(Level.INFO, "input act " + act.toString());
+            switch (act) {
+                case "+" -> {
+                    System.out.println();
+                    System.out.println(inp1 + inp2);
+                    err = false;
+                    stackStep.push(step);
+                    stackVar.push("+");
+                    step = 1;
+                }
+                case "-" -> {
+                    System.out.println();
+                    System.out.println(inp1 - inp2);
+                    err = false;
+                    stackStep.push(step);
+                    stackVar.push("-");
+                    step = 1;
+                }
+                case "*" -> {
+                    System.out.println();
+                    System.out.println(inp1 * inp2);
+                    err = false;
+                    stackStep.push(step);
+                    stackVar.push("*");
+                    step = 1;
+                }
+                case "/" -> {
+                    System.out.println();
+                    if (inp2 == 0) {
+                        System.out.println("can't divide by null");
+                        break;
+                    }
+                    System.out.println(inp1.floatValue() / inp2.floatValue());
+                    stackStep.push(step);
+                    stackVar.push("/");
+                    err = false;
+                    step = 1;
+                }
+                case "stop" -> {
+                    System.out.println();
+                    System.out.println("stop");
+                    err = false;
+                    stop = true;
+                }
+                case "back" -> {
+                    System.out.println();
+                    System.out.println("back");
+                    err = false;
+                    step = stackStep.pop();
+                    act = stackVar.pop();
+                }
+                default -> {
+                    logger.log(Level.INFO, "wrong input act");
+                    System.out.println("wrong input");
+                    iScanner.next();
+                }
+            }
+        }
+    return stop;
+    }
+
+    public static Integer stepNum (boolean err, Logger logger, Integer inp1,
+                                   Stack<String> stackVar, Stack<Integer> stackStep){
+        while(err) {
+            System.out.print("input number " + step.toString() + " ");
+            String inp = iScanner.next();
+            try {
+                inp1 = Integer.valueOf(inp);
+                logger.log(Level.INFO, "input number " + step.toString() +": " + inp1.toString() + " or 'back'");
+                stackStep.push(step);
+                stackVar.push(inp1.toString());
+                err = false;
+                step = step + 1;
+            } catch (Exception ex){
+                if(inp.equals("back")){
+                    step = stackStep.pop();
+                    try {
+                        inp1 = Integer.valueOf(stackVar.pop());
+                    }
+                    catch (Exception sg){
+                        stackVar.pop();
+                        err = false;
+                    }
+                }
+                else {
+                    logger.log(Level.INFO, "wrong input number " + step.toString());
+                    System.out.print("wrong input");
+                    System.out.println();
+                    iScanner.next();
+                }
+            }}
+    return inp1;
+    }
+
 
 }
