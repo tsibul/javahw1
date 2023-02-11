@@ -25,6 +25,7 @@ public class HW6 {
 //         HashMap<String, LapTop> laptopTypes = setLaptop(lapTops); Тестировал hash — работает
          choseShow(lapTops);
          sortBy(lapTops);
+         iScanner.close();
     }
 
     public static HashMap<String, LapTop> setLaptop(ArrayList<LapTop> aList){
