@@ -59,7 +59,7 @@ public class HW5 {
         HashSet<Integer>[] boardsArchive = new HashSet [9];
 
         int i = 0;
-        while (i < 6){
+        while (i < 7){
             for(int j = i; j < 64; j++){
                 boardsArchive[i] = (HashSet<Integer>) freeBoard.clone();
                 if(freeBoard.contains(j)) {
